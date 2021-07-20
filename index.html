@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 </head>
 
-<body >
+<body>
 	<div class="container">
 		<nav>
 			<div id="left-header">
@@ -18,27 +18,32 @@
 			<div id="right-header">
 				<a href="#">Gmail</a>
 				<a href="#">Images</a>
+				<input class="button" type="button" name="Sign In" value="Sign In">
 			</div>
 		</nav>
 
+		<div class="clr"></div>
+
 		<div id="logo">
-			<img src="images/google.png" alt="Google Logo">
+			<div id="logobox">
+				<img src="images/google.png" alt="Google Logo">
+			</div>
+
 		</div>
 		
 		<form>
 			<div id="searchbar">
-				<input type="text" name="search" placeholder="&#128269;">
+				<input type="text" name="search" id="textentry">
 			</div>
 
-			<div>
+			<div id="button-div">
 				<input class="button" type="submit" value="Google Search">
 				<input class="button" type="submit" value="I'm Feeling Lucky">
 			</div>
 		</form>
 
-<!--
 		<footer>
-			<div class="container">
+			<div>
 				<p>United Kingdom</p>
 			</div>
 
@@ -52,6 +57,7 @@
 				</div>
 
 				<div id="mid-footer">
+					<img src="./images/leaf.png" alt="">
 					<a href="#">Carbon neutral since 2007</a>
 				</div>
 
@@ -62,8 +68,6 @@
 				</div>
 			</div>
 		</footer>	
-	-->
 	</div>
-	
 </body>
 </html>
