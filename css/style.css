@@ -174,95 +174,103 @@ footer a {
 	color: #70757a;
 	margin-left: 10px;
 	margin-right: 10px;
-}
-
-#left-footer {
-	float: left;
-	width: 33%;
-	box-sizing: border-box;
-}
-
-#left-footer a {
-	margin-left: 25px;
-}
-
-
-#mid-footer {
-	float: left;
-	width: 33%;
 	text-align: center;
-
-}
-
-#mid-footer img {
-	height: 14px;
-	margin-left: 6px;
-}
-
-#right-footer {
-	float: right;
-	width: 33%;
-	text-align: right;
-}
-
-#right-footer a {
-	margin-right: 25px;
 }
 
 #bottom-footer {
-	padding-bottom: 35px;
+	display: flex;
 }
+
+#left-footer {
+	flex: 1;
+	justify-content: center;
+	text-align: center;
+	padding: 8px 0px;
+}
+
+#mid-footer {
+	flex: 1;
+	justify-content: center;
+	text-align: center;
+	padding: 8px 0px;
+}
+
+#mid-footer img {
+	height: 15px;
+	padding: 0;
+}
+
+#mid-footer a {
+	text-align: center;
+	margin-left: 0;
+}
+
+#right-footer {
+	flex: 1;
+	justify-content: center;
+	text-align: center;
+	padding: 8px 0px;
+}
+
 
 /*
 Two layer footer screensize
 */
 @media (max-width: 1200px) {
-	
-	#mid-footer {
-		display: block;
-		justify-content: center;
-		flex-wrap: nowrap;
+	#bottom-footer {
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	#left-footer {
-		display: flex;
+		order: 1;
+		min-width: 30%;
+		justify-content: flex-start;
+	}
+
+	#mid-footer {
+		order: 0;
+		flex-basis: 100%;
 		justify-content: center;
-		flex-wrap: wrap;
 	}
 
 	#right-footer {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-
+		order: 1;
+		min-width: 30%;
+		justify-content: flex-end;
+	}
 
 }
 
 /*
 Three layer footer and smaller search bar
 */
-@media (max-width:  591px) {
+@media (max-width:  611px) {
 	#searchbar input {
 		height: 25px;
 		max-width: 500px;
 	}
 
-	#mid-footer {
-		display: block;
-		justify-content: center;
-		flex-wrap: nowrap;
+	#bottom-footer {
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	#left-footer {
-		display: flex;
+		order: 1;
+		flex-basis: 100%;
+		justify-content: flex-start;
+	}
+
+	#mid-footer {
+		order: 0;
+		flex-basis: 100%;
 		justify-content: center;
-		flex-wrap: wrap;
 	}
 
 	#right-footer {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-
+		order: 2;
+		flex-basis: 100%;
+		justify-content: flex-end;
 	}
 }
